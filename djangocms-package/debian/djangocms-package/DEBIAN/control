@@ -1,0 +1,12 @@
+Package: djangocms-package
+Version: 0.2
+Architecture: all
+Maintainer: Rustamov Nail  <nailbetter@gmail.com>
+Installed-Size: 167706
+Pre-Depends: nginx
+Depends: postgresql, postgresql-contrib, cron, openssh-server, python3-pip, bash, gunicorn, python3-dev, curl, libpq-dev
+Section: misc
+Priority: extra
+Homepage: https://github.com/Nail081994/stack_of_djangocms_python_nginx_postgresql_gunicorn.git
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

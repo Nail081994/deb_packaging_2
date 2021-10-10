@@ -1,0 +1,16 @@
+Source: djangocms-package
+Section: misc
+Priority: extra
+Maintainer: Rustamov Nail  <nailbetter@gmail.com>
+Build-Depends: debhelper-compat (= 12), bash, devscripts
+Standards-Version: 4.4.1
+Homepage: https://github.com/Nail081994/stack_of_djangocms_python_nginx_postgresql_gunicorn.git
+#Vcs-Browser: https://github.com/Nail081994/stack_of_djangocms_python_nginx_postgresql_gunicorn.git
+#Vcs-Git: https://github.com/Nail081994/stack_of_djangocms_python_nginx_postgresql_gunicorn.git
+
+Package: djangocms-package
+Architecture: all
+Pre-depends: nginx
+Depends: nginx, postgresql, postgresql-contrib, cron, openssh-server, python3-pip, bash, gunicorn, python3-dev, curl, libpq-dev
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

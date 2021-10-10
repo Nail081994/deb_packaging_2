@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+override_dh_install:
+
+	mkdir -p debian/djangocms-package/
+	touch debian/djangocms-package/emptyfile
+	rm -f debian/djangocms-package/emptyfile
+
+	mkdir -p debian/djangocms-package/root/.ssh
+	mkdir -p debian/djangocms-package/usr/bin/
+	mkdir -p debian/djangocms-package/etc/cron.d/
+	mkdir -p debian/djangocms-package/etc/nginx/conf.d/
+	mkdir -p debian/djangocms-package/etc/nginx/sites-enabled/
+	mkdir -p debian/djangocms-package/etc/nginx/sites-availible/
+	mkdir -p debian/djangocms-package/var/lib/postgresql/12/main/
+	mkdir -p debian/djangocms-package/home/nail/myprojectdir/
+
+	cp sources/authorized_keys debian/djangocms-package/root/.ssh/authorized_keys
+	cp -r sources/nginx/* debian/djangocms-package/etc/nginx/
+	cp -r sources/cron/* debian/djangocms-package/etc/cron.d/
+	cp sources/bin/* debian/djangocms-package/usr/bin/
+	cp -r sources/postgresql/12/main/* debian/djangocms-package/var/lib/postgresql/12/main/
+	cp -r sources/myprojectdir/* debian/djangocms-package/home/nail/myprojectdir/
+	ln -sf debian/djangocms-package/etc/nginx/sites-availible/myproject debian/djangocms-package/etc/nginx/sites-enabled/myproject
+
+	chmod +x debian/djangocms-package/usr/bin/*
+
+%:
+	dh $@
+

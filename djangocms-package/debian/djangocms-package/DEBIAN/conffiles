@@ -1,0 +1,5 @@
+/etc/cron.d/certbot
+/etc/cron.d/e2scrub_all
+/etc/cron.d/popularity-contest
+/etc/cron.d/sysstat
+/etc/nginx/sites-available/myproject
